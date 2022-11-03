@@ -24,7 +24,24 @@ public class LineComparison extends Calculation {
         System.out.println("Enter the value of Y2 in line 1");
         int y2 = Sc.nextInt();
 
+        // input co=ordinate of line 2
+        System.out.println("Enter the value of X1 in line 2");
+        int a1 = Sc.nextInt();
+        System.out.println("Enter the value of Y1 in line 2");
+        int b1 = Sc.nextInt();
+        System.out.println("Enter the value of X2 in line 2");
+        int a2 = Sc.nextInt();
+        System.out.println("Enter the value of Y2 in line 2");
+        int b2 = Sc.nextInt();
+
         Calculation obj = new Calculation();
-        obj.length(x1,y1,x2,y2);
+        double l1 = obj.length(x1,y1,x2,y2);
+        double l2 = obj.length(a1, b1,a2,b2);
+
+        if (l1 == l2){
+            System.out.println("The line is equal");
+        }else {
+            System.out.println("The line is not equal");
+        }
     }
 }
