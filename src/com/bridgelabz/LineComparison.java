@@ -37,13 +37,15 @@ public class LineComparison extends Calculation {
         Calculation obj = new Calculation();
         double l1 = obj.length(x1,y1,x2,y2);
         double l2 = obj.length(a1, b1,a2,b2);
-        
 
-        if (l1>l2) {
+        String ln1 = Double.toString(l1);
+        String ln2 = Double.toString(l2);
+
+        if (ln1.compareTo(ln2) < 0) {
             System.out.println(" Line 1 is grater than line 2");
-        } else if (l1<l2) {
+        } else if (ln1.compareTo(ln2) > 0) {
             System.out.println("Line 1 is shorter than line 2");
-        } else if (l1 == l2){
+        } else if (ln1.compareTo(ln2) == 0){
             System.out.println("Both lines are equal ");
         }
     }
